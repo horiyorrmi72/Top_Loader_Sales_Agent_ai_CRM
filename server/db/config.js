@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const User = require("../model/schema/user");
 const bcrypt = require("bcrypt");
-
+const DATABASE_URL = process.env.DB_URL;
+const DATABASE = process.env.DB;
 
 const connectDB = async (DATABASE_URL, DATABASE) => {
   try {
