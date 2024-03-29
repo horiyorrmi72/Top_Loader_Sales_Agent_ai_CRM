@@ -5,7 +5,7 @@ const auth = require("../../middelwares/auth");
 const router = express.Router();
 
 router.post("/admin", user.adminRegister);
-router.get("/", auth, user.index);
+router.get("/",auth, user.index);
 router.post("/register", user.register);
 router.post("/login", user.login);
 router.post("/deleteMany", auth, user.deleteMany);
