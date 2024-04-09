@@ -1,10 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const db = require("./db/config");
 const route = require("./controllers/route");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const port = process.env.port || 5001;
-require("dotenv").config();
+const port = process.env.PORT;
 const fs = require("fs");
 const path = require("path");
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use(function (req, res, next) {
-  const allowedOrigins = ["*", "http://157.245.98.50:5001"];
+  const allowedOrigins = ["*","http://157.245.98.50:5001","https://http://toploaderagentai.com"];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);

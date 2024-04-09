@@ -1,6 +1,11 @@
 const PhoneCall = require("../../model/schema/phoneCall");
 const User = require("../../model/schema/user");
 const mongoose = require("mongoose");
+// const VoiceResponse = require("twilio").twiml.VoiceResponse;
+
+const incomingCall = async (req, res) => {
+  const twiml = new VoiceResponse();
+};
 
 const add = async (req, res) => {
   try {
